@@ -2,11 +2,14 @@
   "name": "qrcode",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jamineto.github.io/qrcode-generator",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out -b gh-pages"
   },
   "dependencies": {
     "daisyui": "^5.1.13",
@@ -21,6 +24,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4"
   }
 }
